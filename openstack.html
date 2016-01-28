@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+
+		<title>OpenStack scripting</title>    
+		<link rel="stylesheet" type="text/css" href="css/openstack.css" />
+    
+	</head>
+
+	<body>
+		<div id="page">
+			<div id="header">
+        <div class="header">OpenStack scripting</div>
+        <div class="meta">
+          <div class="version">v0.1, 2016-01-27</div>
+          <div class="author">author: Aaron Ward <a class="email" href="mailto:aaron.of.ward@gmail.com?subject=OpenStack%20scripting" target="_blank">email</a></div>
+        </div>
+      </div>
+			<div id="content">
+        <div class="description">
+          <div>
+          Traditionally, <a href="https://en.wikipedia.org/wiki/OpenStack">OpenStack</a> resources are managed using a web-based dashboard like <a href="http://docs.openstack.org/developer/horizon/">Horizon</a> that provides a visual interface for data and available actions. While this works well for individual activities, it is not efficient for ongoing operations or repetitive tasks. Fortunately, other interfaces exist that can be more easily leveraged for automated creation and management of resources. The <a href="http://docs.openstack.org/cli-reference/common/cli_overview.html">OpenStack command-line clients</a> are a good example of this; they enable access to OpenStack components from the command line, encouraging the development of lightweight utilities to streamline common tasks.
+          </div>
+          <div>
+          As an example of using of shell scripts to manage OpenStack resources, this project provides for automated setup of a fully functional web server on an OpenStack instance with just a single console command. The command executes a script (hosted here) which uses the OpenStack command-line clients to create, install, and configure all the resources needed to bring a web server online; a new network and subnet, a router to link it to the Internet, a public and private keypair for authentication, a floating IP address for remote access, computing resources to run it on, and the web server software itself. There are no required manual steps; when the script completes successfully, the web server is hosting pages on the Internet.
+          </div>
+          <div>
+          For the purposes of this example, default values have been provided for many configurable options; e.g., network IP ranges are preselected to avoid the necessity of manually entering them at runtime. These values are not hard-coded, however, and customization is supported wherever feasible within the scope of this project.
+          </div>
+          <div>
+          To get started, you will need access to two things:
+          </div>
+          <div>
+            <ol>
+              <li>
+                An OpenStack service to create the resources on. You must be able to authenticate to the service with an account that has sufficient permissions to allocate and manage the necessary resources. For development of these scripts, we used the free <a href="http://trystack.org/">TryStack</a> service.
+              </li>
+              <li>
+                A <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash shell</a> with the OpenStack command-line clients installed, configured for your OpenStack service, using your account credentials. If you are using TryStack, information about the necessary configuration can be found in the FAQ on their homepage. If you need help setting up the OpenStack command-line clients, refer to the <a href="http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html">OpenStack documentation</a> or use my automated setup for VirtualBox <span class="todo">(link pending)</span>.
+              </li>
+            </ol>
+          </div>
+          <div>
+            To execute the script and create the webserver and associated resources, simply run the following command from your Bash shell:
+            <div class="todo"># command-goes-here</div>
+          </div>
+        </div>
+        <div class="header todo">In progress</div>
+        <div class="todo">
+          <div>
+            Caution : deletes resources? Early prototype, largely untested. Not recommended for use with an account containing any production resources.
+          </div>
+          <div>
+            Side effects : artifacts, logs, etc. get-pip.py
+          </div>
+          <div>
+            Known issues : can hang?
+          </div>
+          <div>
+            Configuration : how-to, parameters, environment variables
+          </div>
+          <div>
+            Safety : checks performed
+          </div>
+        </div>
+      </div>
+			<div id="footer"></div>
+		</div>
+	</body>
+
+</html>

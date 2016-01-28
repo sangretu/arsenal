@@ -1,0 +1,48 @@
+/* GENERIC */
+
+*
+{
+  margin           : 0;
+  padding          : 0;
+}
+
+html, body, #page, #content
+{
+  height           : 100%;
+}
+
+body
+{
+  font-family      : 'Times New Roman', Times, Georgia, FreeSerif, serif;
+  vertical-align   : top;
+}
+
+/* OPENSTACK */
+
+.header
+{
+  font-size        : large;
+  font-weight      : bold;
+}
+
+#header .meta
+{
+  font-size        : small;
+  margin           : 0 0.5em;
+}
+
+.description div
+{
+  margin           : 1em 0.5em;
+}
+
+.description ol, .description li
+{
+  margin           : 1em;
+}
+
+.todo
+{
+  color            : red;
+  background-color : beige;
+}

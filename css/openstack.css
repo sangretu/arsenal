@@ -41,6 +41,14 @@ body
   margin           : 1em;
 }
 
+.command
+{
+  color            : limegreen;
+  background-color : black;
+  font-family      : monospace;
+  padding          : 0.5em;
+}
+
 .todo
 {
   color            : red;

@@ -43,11 +43,14 @@
           </div>
           <div>
             To execute the script and create the webserver and associated resources, simply run the following command from your Bash shell:
-            <div class="todo"># command-goes-here</div>
+            <div class="command"># source <(curl -s "http://sangretu.github.io/arsenal/scripts/setup/services/create-vm-openstack.sh")</div>
           </div>
         </div>
-        <div class="header todo">In progress</div>
+        <div class="header todo">Documenation in progress, notes to be included:</div>
         <div class="todo">
+          <div>
+            Current script creates the server but does not install or configure web server software, incorporating those pieces next.
+          </div>
           <div>
             Caution : deletes resources? Early prototype, largely untested. Not recommended for use with an account containing any production resources.
           </div>
@@ -55,7 +58,7 @@
             Side effects : artifacts, logs, installed software, etc
           </div>
           <div>
-            Known issues : can hang?
+            Known issues : can hang if no server response, tries to execute even if resources don't exist
           </div>
           <div>
             Configuration : how-to, parameters, environment variables

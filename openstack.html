@@ -37,13 +37,13 @@
                 An OpenStack service to create the resources on. You must be able to authenticate to the service with an account that has sufficient permissions to allocate and manage the necessary resources. For development of these scripts, we used the free <a href="http://trystack.org/">TryStack</a> service.
               </li>
               <li>
-                A <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash shell</a> with the OpenStack command-line clients installed, configured for your OpenStack service, using your account credentials. If you are using TryStack, information about the necessary configuration can be found in the FAQ on their homepage. If you need help setting up the OpenStack command-line clients, refer to the <a href="http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html">OpenStack documentation</a> or use my automated setup for VirtualBox <span class="todo">(link pending)</span>.
+                A <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash shell</a> with the OpenStack command-line clients installed, configured for your OpenStack service, using your account credentials. If you are using TryStack, information about the necessary configuration can be found in the FAQ on their homepage. If you need help setting up the OpenStack command-line clients, refer to the <a href="http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html">OpenStack documentation</a> or use my <a href="http://sangretu.github.io/arsenal/scripts/setup/services/add-service-openstack.sh">automated setup script for fresh CentOS 7 VirtualBox images</a>.
               </li>
             </ol>
           </div>
           <div>
             To execute the script and create the webserver and associated resources, simply run the following command from your Bash shell:
-            <div class="command"># source <(curl -s "http://sangretu.github.io/arsenal/scripts/setup/services/create-vm-openstack.sh")</div>
+            <div class="command">$ source <(curl -s "http://sangretu.github.io/arsenal/scripts/setup/services/create-vm-openstack.sh")</div>
           </div>
         </div>
         <div class="header todo">Documenation in progress, notes to be included:</div>

@@ -4,7 +4,7 @@
 #
 # @version 0.1
 # @date 2016-01-27
-# @author Aaron Ward
+# @author Aaron Ward (aaron.of.ward@gmail.com)
 #
 # Developed on CentOS 7, not tested elsewhere.
 #
@@ -17,8 +17,8 @@
 #   -q : quiet mode, most output is squelched (critical errors are not).
 #
 # Examples:
-#   source <(curl -s "http://geeq.com/arsenal/setup/services/add-service-openstack.sh")
-#   source <(curl -s "http://geeq.com/arsenal/setup/services/add-service-openstack.sh") -q
+#   source <(curl -s "http://sangretu.github.io/arsenal/scripts/setup/services/add-service-openstack.sh")
+#   source <(curl -s "http://sangretu.github.io/arsenal/scripts/setup/services/add-service-openstack.sh") -q
 #
 # NOTE : Uses "return" instead of "exit" to prevent forced logout during remote
 # execution. It may be necessary to replace "return" with "exit" to run locally.
@@ -58,12 +58,18 @@ DATE=$(date +"%Y-%m-%d %H:%M:%S")
 # parameters
 unset FLAG_Q
 
+# workaround to ensure parameters are read
+# see http://stackoverflow.com/questions/23581368/bug-in-parsing-args-with-getopts-in-bash
+OPTIND=1
+
 while getopts "q" opt; do
   case $opt in
     q)  FLAG_Q=$opt;;
     \?) echo Unknown flag.
   esac
 done
+
+# TODO: add confirmation and -y option
 
 echo [$DATE] [DEBUG] [$SCRIPT_NAME] Adding openstack command-line clients. >> $LOGFILE
 
